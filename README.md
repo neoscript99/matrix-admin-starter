@@ -1,11 +1,22 @@
-## 通知内容参考
+## Introduce
+Matrix Admin stater template
 
-[关于做好2019年鄞州区教育科学规划课题申报工作的通知](http://www.nbyzedu.cn/jyky/jyke_tzgg/201901/t20190116_564413.html)
-
-## 待开发内容
-
-### 立项流程
-- [x] 课题负责人维护
-- [ ] 上传申报盲评文本
+## Run server
+```shell script
+cd starter-service
+../gradlew bootRun
+```
 
 
+## Run ui
+```shell script
+cd starter-ui
+yarn start
+```
+
+
+## Build
+```shell script
+cd starter-service
+../gradlew build
+```
