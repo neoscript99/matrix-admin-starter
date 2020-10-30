@@ -1,12 +1,12 @@
 {
   "name": "starter-ui",
   "version": "1.0.0",
-  "description": "鄞州区科研项目管理系统",
+  "description": "UI template for Matrix Admin",
   "homepage": ".",
   "dependencies": {
     "antd": "^4.7.3",
-    "mobx": "^6.0.1",
-    "mobx-react": "^7.0.0",
+    "mobx": "5.15.4",
+    "mobx-react": "6.1.8",
     "oo-rest-mobx": "^1.0.14",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
