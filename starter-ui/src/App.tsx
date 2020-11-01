@@ -13,13 +13,13 @@ import zhCN from 'antd/lib/locale/zh_CN';
 const introRender = (
   <div>
     <p>
-      立项管理： <em>立项流程、结题流程管理</em>
+      React： <em>Component</em>
     </p>
     <p>
-      成果评比： <em>邀请专家对项目成果进行评分、排名</em>
+      Typescript： <em>Language</em>
     </p>
     <p>
-      论文评比： <em>邀请专家对论文进行评分、排名</em>
+      Mobx： <em>State Manage</em>
     </p>
   </div>
 );
