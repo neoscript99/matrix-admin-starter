@@ -9,13 +9,11 @@
     "mobx-react": "6.1.8",
     "oo-rest-mobx": "^1.0.15",
     "react": "^16.14.0",
-    "react-data-export": "^0.6.0",
     "react-dom": "^16.14.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.3.0",
-    "typescript": "^3.7.3",
-    "xlsx": "^0.16.8"
+    "typescript": "^3.7.3"
   },
   "devDependencies": {
     "@types/jest": "24.0.11",

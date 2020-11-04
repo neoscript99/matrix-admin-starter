@@ -14,7 +14,9 @@ module.exports = {
     },
   },
   rules: {
+    'arrow-parens': ['error', 'as-needed'],
     'linebreak-style': 'off',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
