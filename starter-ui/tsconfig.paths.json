@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "oo-rest-mobx": [
+        "../../matrix-admin/oo-rest-mobx/lib/index.d.ts"
+      ]
+    }
+  }
+}

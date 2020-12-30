@@ -18,4 +18,4 @@ export const deptService = adminServices.deptService;
 
 export const loginService = adminServices.loginService;
 //session登录不成功的话，尝试本地保存的用户密码登录
-loginService.trySessionLogin().then(loginInfo => loginInfo.success || loginService.tryLocalLogin());
+loginService.trySessionLogin().then((loginInfo) => loginInfo.success || loginService.tryLocalLogin());

@@ -65,8 +65,8 @@ class App extends Component {
       <ConfigProvider locale={zhCN}>
         <HashRouter>
           <Switch>
-            <Route path={loginPath} render={props => <Login {...props} {...loginProps} demoUsers={users} />} />
-            <Route render={props => <Home {...props} {...homeProps} />} />
+            <Route path={loginPath} render={(props) => <Login {...props} {...loginProps} demoUsers={users} />} />
+            <Route render={(props) => <Home {...props} {...homeProps} />} />
           </Switch>
         </HashRouter>
       </ConfigProvider>
