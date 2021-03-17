@@ -1,40 +1,33 @@
-abstract class Config {
+export class Config {
+  env = process.env.NODE_ENV;
+  isDev() {
+    return this.env === 'development';
+  }
+  get serverRoot() {
+    return this.isDev() ? 'http://localhost:8080' : '';
+  }
+  get serverLogout() {
+    //ç”Ÿäº§ç¯å¢ƒè·³è½¬æœåŠ¡ç«¯é€€å‡º
+    return !this.isDev();
+  }
   dateFormat = 'MM-DD';
   timeFormat = 'YYYY-MM-DD HH:mm';
-  abstract isDev(): boolean;
   demoUsers = [
     {
-      name: 'ÊĞ¼¶¹ÜÀíÔ±',
+      name: 'å¸‚çº§ç®¡ç†å‘˜',
       username: 'sys-admin',
     },
     {
-      name: 'µ¥Î»¹ÜÀíÔ±',
+      name: 'å•ä½ç®¡ç†å‘˜',
       username: 'dept-admin',
     },
     {
-      name: 'ÆÕÍ¨ÓÃ»§',
+      name: 'æ™®é€šç”¨æˆ·',
       username: 'res-user',
     },
     {
-      name: 'ÆÀÉó×¨¼Ò',
+      name: 'è¯„å®¡ä¸“å®¶',
       username: 'expert',
     },
   ];
-}
-
-export class DevConfig extends Config {
-  serverRoot = 'http://localhost:8080';
-  serverLogout = false;
-  env = 'dev';
-  isDev() {
-    return true;
-  }
-}
-export class ProdConfig extends Config {
-  serverRoot = '';
-  serverLogout = true;
-  env = 'prod';
-  isDev() {
-    return false;
-  }
 }

@@ -4,27 +4,49 @@ const { Title, Paragraph, Text } = Typography;
 
 export const Welcome = (props: any) => (
   <Typography style={{ fontSize: '1.1em' }}>
-    <Title level={2}>系统介绍</Title>
-    <Paragraph>
-      本系统目标是实现科研项目管理流程的电子化，支持历史数据的查询、统计，并为进一步的数据分析、流程优化提供支撑。
-    </Paragraph>
-    <Title level={2}>立项结题流程</Title>
+    <Title level={2}>后台框架</Title>
     <Paragraph>
       <ul>
         <li>
-          <Text code>系统管理员</Text>发布立项计划
+          <Text code>语言</Text>Groovy、Java
         </li>
         <li>
-          <Text code>单位管理员</Text>录入课题基本信息，提交立项申请
+          <Text code>容器</Text>SpringBoot单体应用，暂不支持微服务
         </li>
         <li>
-          <Text code>系统管理员</Text>审核立项申请
+          <Text code>持久层</Text>使用grails的gorm模块，底层还是基于Jpa-Hibernate
         </li>
         <li>
-          <Text code>单位管理员</Text>录入课题结题资料，提交结题申请
+          <Text code>数据库版本管理</Text>Flyway
         </li>
         <li>
-          <Text code>系统管理员</Text>审核结题申请
+          <Text code>Service</Text>通用基类AbstractService
+        </li>
+        <li>
+          <Text code>Controller</Text>通用基类DomainController
+        </li>
+        <li>
+          <Text code>权限控制</Text>通用基类SecureController
+        </li>
+        <li>
+          <Text code>认证</Text>支持传统session，也支持前后端分离的jwt模式
+        </li>
+      </ul>
+    </Paragraph>
+    <Title level={2}>前台框架</Title>
+    <Paragraph>
+      <ul>
+        <li>
+          <Text code>语言</Text>Typescript、React
+        </li>
+        <li>
+          <Text code>状态管理</Text>React-Hook + useServiceStore + DomainStore
+        </li>
+        <li>
+          <Text code>前端逻辑</Text>通用基类DomainService.ts
+        </li>
+        <li>
+          <Text code>组件</Text>Ant Design & ProComponents
         </li>
       </ul>
     </Paragraph>

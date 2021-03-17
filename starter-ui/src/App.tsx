@@ -9,17 +9,20 @@ import logo from './asset/logo.png';
 import mainBG from './asset/main_bg.jpg';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
+
+const title = 'Matrix Admin Starter';
 const introRender = (
+  <div className="flex-row" style={{ justifyContent: 'center' }}>
+    <img src="http://attach.neoscript.wang/fmind_mp_qrcode_344.jpg" width={200} />
+    <em>羽意软件公众号</em>
+  </div>
+);
+const logoRender = (
   <div>
-    <p>
-      React： <em>Component</em>
-    </p>
-    <p>
-      Typescript： <em>Language</em>
-    </p>
-    <p>
-      Mobx： <em>State Manage</em>
-    </p>
+    <img src={logo} height={62} />
+    <em className="logo-font" style={{ margin: '0 5px', fontSize: 20 }}>
+      {title}
+    </em>
   </div>
 );
 const loginPath = '/login/';
@@ -27,7 +30,7 @@ const headerPics = [require('./asset/header_bg1.png'), require('./asset/header_b
 const headerBG = headerPics[Math.round(Math.random())];
 const loginProps: LoginFormProps = {
   adminServices,
-  title: 'Matrix Admin Starter',
+  title,
   introRender,
   //https://unsplash.com/photos/asviIGR3CPE
   backgroundImage: `url(${mainBG})`,
@@ -36,7 +39,7 @@ const homeProps = {
   adminServices,
   serverLogout: config.serverLogout,
   serverRoot: config.serverRoot,
-  logoRender: <img src={logo} />,
+  logoRender,
   headerCss: { background: `url(${headerBG}) no-repeat center center`, backgroundColor: 'white' },
   PageSwitch,
   loginPath,
@@ -60,7 +63,7 @@ export default function App() {
   const profiles = useMemo(() => paramService.getByCode('EnvironmentProfiles')?.value, [paramStore]);
   console.debug('EnvironmentProfiles: ', profiles);
   const isDev = useMemo(() => profiles && profiles.split(',').includes('dev'), [profiles]);
-  const users = useMemo(() => (isDev && config.demoUsers ? config.demoUsers : undefined), [isDev]);
+  const users = useMemo(() => isDev && config.demoUsers, [isDev]);
   return (
     <ConfigProvider locale={zhCN}>
       <HashRouter>

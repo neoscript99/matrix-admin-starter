@@ -6,6 +6,7 @@ import { Button, Space, Tag } from 'antd';
 import { planService } from '../../services';
 import ProList from '@ant-design/pro-list';
 import { useServiceStore } from 'matrix-ui-com';
+import { Criteria } from 'matrix-ui-service';
 
 export const PlanList: React.FC = () => {
   return (
@@ -17,20 +18,6 @@ export const PlanList: React.FC = () => {
     </PageContainer>
   );
 };
-const columns: ProColumns<PlanEntity>[] = [
-  {
-    title: '应用名称',
-    dataIndex: 'name',
-  },
-  {
-    title: '创建者',
-    dataIndex: 'creator',
-  },
-  {
-    title: '状态',
-    dataIndex: 'status',
-  },
-];
 
 export const PlanStartedList: React.FC = () => {
   const planStore = useServiceStore(planService);
@@ -62,6 +49,29 @@ export const PlanStartedList: React.FC = () => {
     />
   );
 };
+
+const columns: ProColumns<PlanEntity>[] = [
+  {
+    title: '计划名称',
+    dataIndex: 'planName',
+  },
+  {
+    title: '年度',
+    dataIndex: 'planYear',
+  },
+  {
+    title: '类型',
+    dataIndex: ['type', 'name'],
+  },
+  {
+    title: '开始日期',
+    dataIndex: 'planBeginDay',
+  },
+  {
+    title: '截止日期',
+    dataIndex: 'planEndDay',
+  },
+];
 export const PlanTable: React.FC = () => {
   return (
     <ProTable<PlanEntity>
@@ -69,7 +79,9 @@ export const PlanTable: React.FC = () => {
       request={(params, sorter, filter) => {
         // 表单搜索项会从 params 传入，传递给后端接口。
         console.log(params, sorter, filter);
-        return planService.listAll({}).then((res) => ({
+        const criteria: Criteria = { eq: [], like: [] };
+        if (params.planName) criteria.like.push(['planName', `${params.planName}%`]);
+        return planService.listAll({ criteria }).then((res) => ({
           data: res.results,
           success: true,
         }));
@@ -84,16 +96,16 @@ export const PlanTable: React.FC = () => {
       }}
       dateFormatter="string"
       toolbar={{
-        title: '高级表格',
-        tooltip: '这是一个标题提示',
+        title: '计划列表',
+        tooltip: '底部为当前运行中的计划',
       }}
       toolBarRender={() => [
         <Button key="danger" danger>
-          危险按钮
+          删除
         </Button>,
-        <Button key="show">查看日志</Button>,
+        <Button key="show">查看详情</Button>,
         <Button type="primary" key="primary">
-          创建应用
+          创建计划
         </Button>,
       ]}
     />
