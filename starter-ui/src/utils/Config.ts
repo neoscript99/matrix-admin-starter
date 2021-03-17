@@ -4,14 +4,20 @@ abstract class Config {
   abstract isDev(): boolean;
   demoUsers = [
     {
-      name: 'System Admin',
-      username: 'admin',
-      passwordHash: '2f183a4e64493af3f377f745eda502363cd3e7ef6e4d266d444758de0a85fcc8',
+      name: '市级管理员',
+      username: 'sys-admin',
     },
     {
-      name: 'Normal User',
-      username: 'test.user',
-      passwordHash: '2f183a4e64493af3f377f745eda502363cd3e7ef6e4d266d444758de0a85fcc8',
+      name: '单位管理员',
+      username: 'dept-admin',
+    },
+    {
+      name: '普通用户',
+      username: 'res-user',
+    },
+    {
+      name: '评审专家',
+      username: 'expert',
     },
   ];
 }

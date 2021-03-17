@@ -14,7 +14,6 @@ module.exports = {
     },
   },
   rules: {
-    'linebreak-style': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -23,7 +22,9 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
+    'react/prop-types': 'off',
     'react/jsx-no-target-blank': 'off',
     'no-restricted-globals': 'off',
   },

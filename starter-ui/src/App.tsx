@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { useMemo } from 'react';
 import './App.css';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { Login, LoginFormProps, Home } from 'oo-rest-mobx';
+import { Login, LoginFormProps, Home, useServiceStore } from 'matrix-ui-com';
 import { adminServices, paramService } from './services';
 import { config } from './utils';
 import { PageSwitch } from './pages';
 import logo from './asset/logo.png';
 import mainBG from './asset/main_bg.jpg';
-import { observer } from 'mobx-react';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 const introRender = (
@@ -55,23 +54,21 @@ const homeProps = {
   ),
 };
 
-@observer
-class App extends Component {
-  render() {
-    const profiles = paramService.getByCode('EnvironmentProfiles')?.value;
-    console.debug('EnvironmentProfiles: ', profiles);
-    const users = profiles === 'dev' && config.demoUsers ? config.demoUsers : undefined;
-    return (
-      <ConfigProvider locale={zhCN}>
-        <HashRouter>
-          <Switch>
-            <Route path={loginPath} render={(props) => <Login {...props} {...loginProps} demoUsers={users} />} />
-            <Route render={(props) => <Home {...props} {...homeProps} />} />
-          </Switch>
-        </HashRouter>
-      </ConfigProvider>
-    );
-  }
+export default function App() {
+  const paramStore = useServiceStore(paramService);
+  //依赖paramStore
+  const profiles = useMemo(() => paramService.getByCode('EnvironmentProfiles')?.value, [paramStore]);
+  console.debug('EnvironmentProfiles: ', profiles);
+  const isDev = useMemo(() => profiles && profiles.split(',').includes('dev'), [profiles]);
+  const users = useMemo(() => (isDev && config.demoUsers ? config.demoUsers : undefined), [isDev]);
+  return (
+    <ConfigProvider locale={zhCN}>
+      <HashRouter>
+        <Switch>
+          <Route path={loginPath} render={() => <Login {...loginProps} demoUsers={users} isDev={isDev} />} />
+          <Route render={() => <Home {...homeProps} />} />
+        </Switch>
+      </HashRouter>
+    </ConfigProvider>
+  );
 }
-
-export default App;
