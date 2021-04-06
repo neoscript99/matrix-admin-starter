@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router';
-import { adminServices } from '../services';
 import { Welcome } from './Welcome';
 import {
   RoleList,
@@ -14,7 +13,8 @@ import {
   UserProfile,
 } from 'matrix-ui-com';
 import { PlanList } from './plan/PlanList';
-
+import { yard } from '../services';
+const { adminServices } = yard;
 const allOp: OperatorSwitch = { create: true, update: true, delete: true, view: true };
 export const PageSwitch = (props: PageSwitchProps) => {
   const { pathPrefix } = props;

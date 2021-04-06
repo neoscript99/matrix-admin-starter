@@ -7547,23 +7547,23 @@ material-colors@^1.2.1:
   resolved "https://registry.npm.taobao.org/material-colors/download/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha1-bRlYhxEmmSzuzHL0vMTY8BCGX0Y=
 
-matrix-ui-com@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/matrix-ui-com/download/matrix-ui-com-1.0.0.tgz#81931b7cfd9fa39a936be29949d731d47074dad6"
-  integrity sha1-gZMbfP2fo5qTa+KZSdcx1HB02tY=
+matrix-ui-com@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/matrix-ui-com/download/matrix-ui-com-1.0.1.tgz#313159b0992fd705a0fdb388df6f53c909154ca7"
+  integrity sha1-MTFZsJkv1wWg/bOI329TyQkVTKc=
   dependencies:
     js-sha256 "^0.9.0"
-    matrix-ui-service "^1.0.2"
+    matrix-ui-service "^1.0.4"
     moment "^2.29.1"
     numeral "^2.0.6"
     string-template "^1.0.0"
     styled-components "4.3.2"
     url-template "^2.0.8"
 
-matrix-ui-service@^1.0.2, matrix-ui-service@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npm.taobao.org/matrix-ui-service/download/matrix-ui-service-1.0.3.tgz#06861637b3d8e144a1f179bdb91f553267a3ced8"
-  integrity sha1-BoYWN7PY4USh8Xm9uR9VMmejztg=
+matrix-ui-service@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/matrix-ui-service/download/matrix-ui-service-1.0.4.tgz?cache=0&sync_timestamp=1617671728347&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmatrix-ui-service%2Fdownload%2Fmatrix-ui-service-1.0.4.tgz#7ee432b3a8bccd92578abee4f28c1bab2303c53b"
+  integrity sha1-fuQys6i8zZJXir7k8owbqyMDxTs=
   dependencies:
     js-sha256 "^0.9.0"
     lodash "^4.17.20"

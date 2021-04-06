@@ -3,11 +3,11 @@ import React from 'react';
 import ProTable, { ProColumns } from '@ant-design/pro-table';
 import { PlanEntity } from '../../services/PlanService';
 import { Button, Space, Tag } from 'antd';
-import { planService } from '../../services';
 import ProList from '@ant-design/pro-list';
 import { useServiceStore } from 'matrix-ui-com';
 import { Criteria } from 'matrix-ui-service';
-
+import { yard } from '../../services';
+const { planService } = yard;
 export const PlanList: React.FC = () => {
   return (
     <PageContainer
