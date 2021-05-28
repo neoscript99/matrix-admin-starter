@@ -6,10 +6,6 @@ export class Config {
   get serverRoot() {
     return this.isDev() ? 'http://localhost:8080' : '';
   }
-  get serverLogout() {
-    //生产环境跳转服务端退出
-    return !this.isDev();
-  }
   dateFormat = 'MM-DD';
   timeFormat = 'YYYY-MM-DD HH:mm';
   demoUsers = [

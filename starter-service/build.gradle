@@ -18,13 +18,19 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenLocal()
-    jcenter()
+    maven {
+        credentials {
+            username 'BKfdYT'
+            password 'sO0bwbF3wq'
+        }
+        url 'https://packages.aliyun.com/maven/repository/2092094-release-IiCP3V/'
+    }
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
 }
 
 dependencies {
-    implementation ('com.feathermind.matrix:matrix-admin:1.6.7')
+    implementation ('com.feathermind.matrix:matrix-admin:1.6.8')
     implementation 'org.projectlombok:lombok:1.18.16'
     //gradle支持lombok编译
     annotationProcessor 'org.projectlombok:lombok:1.18.16'

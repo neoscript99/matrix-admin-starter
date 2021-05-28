@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import { Login, LoginFormProps, Home, useServiceStore } from 'matrix-ui-com';
+import { HashRouter } from 'react-router-dom';
+import { Login, Home, useServiceStore } from 'matrix-ui-com';
 import { config } from './utils';
 import { PageSwitch } from './pages';
 import logo from './asset/logo.png';
@@ -14,10 +14,10 @@ import { yard } from './services';
 
 const title = 'Matrix Admin Starter';
 const introRender = (
-  <div className="flex-row" style={{ justifyContent: 'center' }}>
+  <>
     <img src="http://attach.neoscript.wang/fmind_mp_qrcode_344.jpg" width={200} />
     <em>羽意软件公众号</em>
-  </div>
+  </>
 );
 const logoRender = (
   <div>
@@ -46,17 +46,17 @@ export default function App() {
   const loginStore = useServiceStore(yard.adminServices.loginService);
   return (
     <ConfigProvider locale={zhCN}>
-      <BrowserRouter>
+      <HashRouter>
         {loginStore.loginInfo.success ? (
           <Home
             adminServices={yard.adminServices}
-            serverLogout={config.serverLogout}
             serverRoot={config.serverRoot}
             logoRender={logoRender}
-            PageSwitch={PageSwitch}
             headerCss={headerCss}
             footRender={footRender}
-          />
+          >
+            <PageSwitch />
+          </Home>
         ) : (
           <Login
             adminServices={yard.adminServices}
@@ -64,9 +64,10 @@ export default function App() {
             introRender={introRender}
             backgroundImage={`url(${mainBG})`}
             demoUsers={config.demoUsers}
+            useWechat
           />
         )}
-      </BrowserRouter>
+      </HashRouter>
     </ConfigProvider>
   );
 }
