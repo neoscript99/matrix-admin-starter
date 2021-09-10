@@ -17,20 +17,27 @@ version = 1.0
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenLocal()
+    //mavenLocal()
     maven {
         credentials {
             username 'BKfdYT'
-            password 'sO0bwbF3wq'
+            password System.getenv('ALIYUN_PASSWORD')
         }
         url 'https://packages.aliyun.com/maven/repository/2092094-release-IiCP3V/'
+    }
+    maven {
+        credentials {
+            username 'BKfdYT'
+            password System.getenv('ALIYUN_PASSWORD')
+        }
+        url 'https://packages.aliyun.com/maven/repository/2092094-snapshot-5LY1FN/'
     }
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
 }
 
 dependencies {
-    implementation ('com.feathermind.matrix:matrix-admin:1.6.8')
+    implementation ('com.feathermind.matrix:matrix-admin:1.6.9-SNAPSHOT')
     implementation 'org.projectlombok:lombok:1.18.16'
     //gradle支持lombok编译
     annotationProcessor 'org.projectlombok:lombok:1.18.16'

@@ -7459,13 +7459,13 @@ material-colors@^1.2.1:
   resolved "https://registry.npm.taobao.org/material-colors/download/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha1-bRlYhxEmmSzuzHL0vMTY8BCGX0Y=
 
-matrix-ui-com@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/matrix-ui-com/-/matrix-ui-com-1.0.2.tgz#ef9f942ed53f7d71065b6411d007ffb11dd0c64d"
-  integrity sha512-jlvJszDg45iddql4S3EKwbPa75ezNnmaYv7AzLrAvSEpHF6PlMG5VXEJIDPhKZDgbgLd+5QPjvF7VGPAheN62Q==
+matrix-ui-com@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.nlark.com/matrix-ui-com/download/matrix-ui-com-1.0.3.tgz#3800ad26174585ec086f71db67919e1ea4739fbb"
+  integrity sha1-OACtJhdFhewIb3HbZ5GeHqRzn7s=
   dependencies:
     js-sha256 "^0.9.0"
-    matrix-ui-service "^1.0.5"
+    matrix-ui-service "1.0.7"
     moment "^2.29.1"
     numeral "^2.0.6"
     react-csv "^2.0.3"
@@ -7473,10 +7473,10 @@ matrix-ui-com@^1.0.2:
     styled-components "4.3.2"
     url-template "^2.0.8"
 
-matrix-ui-service@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.nlark.com/matrix-ui-service/download/matrix-ui-service-1.0.5.tgz#e8fa6b6de58a3dc107761203a6fa14e5e38f2747"
-  integrity sha1-6PprbeWKPcEHdhIDpvoU5eOPJ0c=
+matrix-ui-service@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.nlark.com/matrix-ui-service/download/matrix-ui-service-1.0.7.tgz?cache=0&sync_timestamp=1631239671467&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmatrix-ui-service%2Fdownload%2Fmatrix-ui-service-1.0.7.tgz#dd7e06e041a60713ae5a9ed05d8e09b0ca8aec31"
+  integrity sha1-3X4G4EGmBxOuWp7QXY4JsMqK7DE=
   dependencies:
     js-sha256 "^0.9.0"
     lodash "^4.17.20"

@@ -12,8 +12,8 @@
     "@ant-design/pro-table": "^2.39.0",
     "@babel/helper-regex": "^7.10.5",
     "antd": "^4.16.0",
-    "matrix-ui-com": "^1.0.2",
-    "matrix-ui-service": "^1.0.5",
+    "matrix-ui-com": "1.0.3",
+    "matrix-ui-service": "1.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
@@ -47,16 +47,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }
