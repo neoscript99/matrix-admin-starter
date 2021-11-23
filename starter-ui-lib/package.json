@@ -1,0 +1,28 @@
+{
+  "name": "starter-ui-lib",
+  "version": "1.0.0",
+  "description": "Starter UI Lib",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "jsnext:main": "src/index.ts",
+  "scripts": {
+    "build": "pnpx tsc",
+    "watch": "pnpx tsc -w"
+  },
+  "author": "Neo Wong",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neoscript99/matrix-admin-starter.git"
+  },
+  "dependencies": {
+    "matrix-ui-service": "1.1.0"
+  },
+  "devDependencies": {
+    "node-fetch": "2.6.5"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
+}
