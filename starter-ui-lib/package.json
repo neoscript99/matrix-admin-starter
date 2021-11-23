@@ -16,7 +16,7 @@
     "url": "git+https://github.com/neoscript99/matrix-admin-starter.git"
   },
   "dependencies": {
-    "matrix-ui-service": "1.1.0"
+    "matrix-ui-service": "^1.1.1"
   },
   "devDependencies": {
     "node-fetch": "2.6.5"
