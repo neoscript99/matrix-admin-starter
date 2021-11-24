@@ -7,6 +7,7 @@ import ProList from '@ant-design/pro-list';
 import { useServiceStore } from 'matrix-ui-com';
 import { Criteria } from 'matrix-ui-service';
 import { yard } from '../../services';
+import { libFoo } from 'starter-ui-lib';
 const { planService } = yard;
 export const PlanList: React.FC = () => {
   return (
@@ -104,7 +105,7 @@ export const PlanTable: React.FC = () => {
           删除
         </Button>,
         <Button key="show">查看详情</Button>,
-        <Button type="primary" key="primary">
+        <Button type="primary" key="primary" onClick={() => libFoo()}>
           创建计划
         </Button>,
       ]}
