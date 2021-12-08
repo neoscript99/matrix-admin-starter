@@ -37,7 +37,7 @@ repositories {
 }
 
 dependencies {
-    implementation ('com.feathermind.matrix:matrix-admin:1.6.9-SNAPSHOT')
+    implementation ('com.feathermind.matrix:matrix-admin:1.6.10-SNAPSHOT')
     implementation 'org.projectlombok:lombok:1.18.16'
     //gradle支持lombok编译
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
@@ -62,8 +62,8 @@ task copyReact(type: Copy) {
 }
 
 evaluationDependsOn(":starter-ui")
-def yarnBuild = project(":starter-ui").tasks.yarnBuild
+def uiBuild = project(":starter-ui").tasks.uiBuild
 bootJar {
-    copyReact.mustRunAfter(yarnBuild)
-    dependsOn(yarnBuild, copyReact)
+    copyReact.mustRunAfter(uiBuild)
+    dependsOn(uiBuild, copyReact)
 }

@@ -5,6 +5,6 @@ node {
     download = false
 }
 
-task yarnBuild(type: YarnTask) {
-    args = ['build']
+task uiBuild(type: NpmTask) {
+    args = ['run', 'build']
 }
