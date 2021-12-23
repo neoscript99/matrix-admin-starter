@@ -15,13 +15,13 @@ import { yard } from './services';
 const title = 'Matrix Admin Starter';
 const introRender = (
   <>
-    <img src="http://attach.neoscript.wang/fmind_mp_qrcode_344.jpg" width={200} />
+    <img src="http://attach.neoscript.wang/fmind_mp_qrcode_344.jpg" width={200} alt="qrcode" />
     <em>羽意软件公众号</em>
   </>
 );
 const logoRender = (
   <div>
-    <img src={logo} height={62} />
+    <img src={logo} height={62} alt="logo" />
     <em className="logo-font" style={{ margin: '0 5px', fontSize: 20 }}>
       {title}
     </em>

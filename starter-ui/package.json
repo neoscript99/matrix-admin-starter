@@ -11,16 +11,19 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@ant-design/pro-card": "^1.18.4",
-    "@ant-design/pro-form": "^1.49.2",
-    "@ant-design/pro-layout": "^6.31.1",
-    "@ant-design/pro-list": "^1.20.3",
-    "@ant-design/pro-table": "^2.58.0",
-    "@babel/helper-regex": "^7.10.5",
-    "antd": "^4.17.1",
-    "matrix-ui-com": "^1.0.5",
-    "matrix-ui-service": "^1.1.1",
+    "@ant-design/pro-card": "^1.18.11",
+    "@ant-design/pro-form": "^1.50.0",
+    "@ant-design/pro-layout": "^6.31.7",
+    "@ant-design/pro-list": "^1.21.0",
+    "@ant-design/pro-table": "^2.60.0",
+    "antd": "^4.17.3",
+    "js-sha256": "^0.9.0",
+    "matrix-ui-com": "1.0.7",
+    "matrix-ui-service": "1.1.2",
+    "moment": "^2.29.1",
+    "numeral": "^2.0.6",
     "react": "^17.0.2",
+    "react-csv": "^2.0.3",
     "react-dom": "^17.0.2",
     "react-router": "^5",
     "react-router-dom": "^5",
@@ -28,14 +31,12 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.36",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^5"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
+    "defaults"
   ]
 }
